@@ -1,0 +1,59 @@
+*{
+    font-family: 'Bitter', serif;
+}
+
+body{
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
+}
+
+.skull1{
+    width:50px;
+    height:50px;
+}
+
+.skull2{
+    width:70px;
+    height:70px;
+}
+
+.skull3{
+    width:35px;
+    height:35px;
+}
+
+.ladoA{
+    transform: scaleX(1);
+}
+
+.ladoB{
+    transform: scaleX(-1);
+}
+
+.painel {
+	position: absolute;
+	width: 190px;
+	padding: 10px;
+	left: 0px;
+	bottom: 0px;
+	border-top:solid 1px #fff;
+    border-radius: 5px;
+	background-color: #fff;
+	opacity: 0.7;
+}
+
+.vidas {
+	float: left;
+   
+}
+.vidas .img{
+    width: 50px;
+	height: 50px;
+}
+
+.cronometro {
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
+}
