@@ -7,34 +7,30 @@ html {
 }
 
 body{
-    background-image: url(images/back.png);
+    background-image: url(images/game-over.png);
     background-repeat: no-repeat;
     background-size: 100%;
+    overflow: hidden;
 }
 
-.title-game{
-    justify-content: center;
-    align-items: center;
-    font-size: 60px;
-    font-weight: 600;
-    color: #fff;
-    margin-top: 225px;
-    margin-bottom: 20px
-}
 
+
+.row{
+    margin-top: 605px;
+}
 .skull1{
-    width:50px;
-    height:50px;
+    width:60px;
+    height:60px;
 }
 
 .skull2{
-    width:70px;
-    height:70px;
+    width:75px;
+    height:75px;
 }
 
 .skull3{
-    width:35px;
-    height:35px;
+    width:45px;
+    height:45px;
 }
 
 .ladoA{

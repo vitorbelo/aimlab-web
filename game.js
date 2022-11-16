@@ -2,6 +2,19 @@
 var altura = 0;
 var largura = 0;
 var vidas = 1;
+var tempo = 10;
+var criaAlvoTempo = 1500;
+
+var nivel = window.location.search;
+nivel = nivel.replace('?', '');
+
+if(nivel === 'normal'){
+    criaAlvoTempo = 1500;
+} else if(nivel === 'dificil'){
+    criaAlvoTempo = 1000;
+} else if(nivel === 'god'){
+    criaAlvoTempo = 750;
+}
 
 function ajustaTamanhoPalcoJogo() {
     altura = window.innerHeight;
@@ -12,6 +25,19 @@ function ajustaTamanhoPalcoJogo() {
 
 ajustaTamanhoPalcoJogo();
 
+var cronometro = setInterval(function() {
+
+    tempo -= 1;
+
+    if(tempo < 0) {
+        clearInterval(cronometro);
+        clearInterval(criaAlvo);
+        window.location.href = 'win.html';
+    } else {
+        document.getElementById('cronometro').innerHTML = tempo;
+    }
+
+}, 1000);
 
 function posicaoRandomica() {
 
@@ -20,7 +46,8 @@ function posicaoRandomica() {
         document.getElementById('skull').remove();
 
         if(vidas > 3){
-
+			
+            window.location.href = 'game-over.html';
         } else{
             document.getElementById('v' + vidas).src = "images/coracao_vazio.png";
             vidas++;
